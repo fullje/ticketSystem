@@ -1,0 +1,33 @@
+﻿<Window x:Class="ticketAdmin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ticketAdmin"
+        mc:Ignorable="d"
+        Title="AdminApp" Height="600" Width="800">
+    <Grid Background="#FFE5E5E5">
+        <DataGrid x:Name="ticketSystemGrid" HorizontalAlignment="Left" Height="220" Margin="10,339,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="ticketSystemGrid_SelectionChanged"/>
+        <TextBox x:Name="eventViewBox" HorizontalAlignment="Left" Height="250" Margin="287,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="495" IsEnabled="False"/>
+        <Button x:Name="closeEvent" Content="Zamknij zgłoszenie" HorizontalAlignment="Left" Margin="135,210,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="closeEvent_Click"/>
+        <Button x:Name="openEvent" Content="Otwórz zgłoszenie" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="openEvent_Click"/>
+        <Label Content="Użytkownik:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <TextBox x:Name="userNameBox" HorizontalAlignment="Left" Height="25" Margin="135,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Nazwa komputera:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <Label Content="Adres komputera:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <TextBox x:Name="computerNameBox" HorizontalAlignment="Left" Height="25" Margin="135,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="addressNameBox" HorizontalAlignment="Left" Height="25" Margin="135,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Telefon:" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <TextBox x:Name="telBox" HorizontalAlignment="Left" Height="25" Margin="135,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <TextBox x:Name="statusBox" HorizontalAlignment="Left" Height="25" Margin="135,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120
+                 " IsEnabled="False"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="279" Margin="270,0,0,0" VerticalAlignment="Top" Width="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="0,277,0,0" VerticalAlignment="Top" Width="792"/>
+        <Label Content="Numer pokoju:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <TextBox x:Name="roomNumberBox" HorizontalAlignment="Left" Height="25" Margin="135,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="refreshView" Content="Odśwież Widok" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="120" Height="50" Click="refreshView_Click"/>
+        <TextBlock x:Name="timeBlock" HorizontalAlignment="Left" Margin="287,292,0,0" TextWrapping="Wrap" Text="YYYY, MM, DD, 00:00" VerticalAlignment="Top" Height="50" Width="247" FontSize="20" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
